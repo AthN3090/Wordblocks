@@ -1,10 +1,11 @@
-$(document).ready(function(){
-        $(".loading").delay(200).fadeOut(800);
-                      $("#loadscreen").delay(200).fadeOut(800);
-    $("#textbox").fadeOut(300);
+   
+      $(window).on("load",function(){
+        $('#loadscreen').delay(500).fadeOut("slow");
+        });
 
 
-$("#pen").click(function(){
+
+   $("#pen").click(function(){
     $("#textbox").fadeIn(300);
     });
 
@@ -17,6 +18,4 @@ $("#pen").click(function(){
         $("#textbox").fadeOut(300); 
 
     });
-    
 
-});

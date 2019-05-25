@@ -35,9 +35,15 @@
              </div></div>
         <!-- loading screen--><div id=loadscreen>
     
-         <div class="loading">
-        </div>
-    </div><!-- loading screen -->
+         <div id=loadscreen>
+    
+    
+            <div class="text-center">
+  <div class="spinner-grow loading" style="height:90px;width:90px;color:#3bcc72;" role="status">
+  </div>
+</div>
+    
+        </div><!-- loading screen -->
     <div id="topbar"><!-- topbar for search and title -->
         <a href="index.php"><font id="headerfont">blogsPot</font></a>
     <img id="search" src="images/search.png">
