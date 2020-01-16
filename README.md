@@ -1,5 +1,5 @@
 # WordBlocks
-Wordblocks is a basic blogging platform. 
+Wordblocks is a very basic blogging platform. 
 
 ## Getting Started
 
