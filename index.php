@@ -1,5 +1,10 @@
 
-<?php include('server.php') ?>
+<?php include('server.php');
+if(isset($_SESSION['username'])){
+    header("location:userpage.php");
+}
+
+?>
 
 <html>
 
@@ -31,13 +36,13 @@
     <!-- TITLE -->    
         <title>
     
-        Welcome to BlogsPot !
+        Welcome to WordBlocks !
     
         </title>
     </head>
 
 
-    <body id="homeBody">
+    <body class="homeBody">
 <!-- loading screen-->
 
     <div id=loadscreen>
@@ -51,19 +56,18 @@
         </div>
     <!-- loading screen ends-->
     <div id="navbar"><!-- topbar for search and title -->
-        <a href="index.php"><font id="headerfont">blogsPot</font></a>
+        <a href="index.php"><font id="headerfont">WordBlocks</font></a>
     </div>
 
     <!-- bootstrap cointainer -->
-        <div class="cointainer-fluid" style="position:relative;top:10%;">
-            <div class="row">
-        <div class="col-sm"> 
-            <img id="pageicon" src="images/favicon-1024.png">
-    <div id="greettext">Welcome to BlogsPot!</div>
+        <div class="cointainer-fluid" style="position:relative;top:50pt;;">
+            <div class="row no-gutters">
+        <div class="col-sm mr-auto"> 
+            <img id="pageicon" src="images/wB-logo.png">
+    <div id="greettext">Welcome to WordBlocks!</div>
     </div>
     <!--login box -->
-    <div class="col-sm">
-        
+    <div class="col-sm mr-auto">
         <div id="loginBox" >
         
                 <img id="userPic" class="img-fluid" src="images/user.png">
@@ -82,6 +86,7 @@
                 </form><!-- login form ends -->
     
         </div>
+      
                 <!-- login box -->
     </div>
             </div>

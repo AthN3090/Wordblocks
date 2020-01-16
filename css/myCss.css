@@ -2,18 +2,26 @@
 grey-color:##2f3030
 green color:#3bcc72 
 rgb(246, 248, 250);
+#efefef
+#cccccc
 */
 
 
+form{
+ margin:0px; padding:0px;
+}
+textarea{
+    resize: none;
+}
 body{margin:0;
     height: 100%;
     width: 100%;
     background-size:100% 100vh;
     background-repeat: no-repeat;
     background-attachment: fixed;
-   background-color: rgb(246, 248, 250);
+   background-color:#e8e8e8 !important;
 }
-#homeBody{
+.homeBody{
     margin:0;
     height: 100%;
     width: 100%;
@@ -38,28 +46,26 @@ body{margin:0;
     transition:0.2s; 
 }
 #topbar{
-    height:10%;
+    height:70px;
     width: 100%;
-    background-color:black;
     box-shadow:0px 10px 50px black;
 }
 #headerfont{
-    position: absolute;
-    left:25px;
-    font-family:pacifico;
+    text-decoration: none;
+    position: relative;
+    font-family: pacifico;
     color: white;
-    font-size:40;
-    transition: 0.2s;
+    margin-right:10; 
+    font-size:40px;
+    transition: 0.2s !important;
 }
 #headerfont:hover{
-    cursor: pointer;
-    transform: scale(1.09,1.09);
-    transition: 0.2s;
+    cursor: pointer !important;
+    transform: scale(1.09,1.09) !important;
+    transition: 0.2s !important;
 }
 #loginBox{
-    margin-top:100pt auto;
-    position: relative;
-    top: 60pt;
+    
     display: block;
     margin: auto;
     height: 500px;
@@ -70,6 +76,8 @@ body{margin:0;
 }
 @media screen and (max-width:500px){
     #loginBox{
+        position: relative;
+        top:50pt;
         width: 90%;
         margin-left: 5%;
         margin-right: 5%;
@@ -163,16 +171,21 @@ body{margin:0;
     position: relative;
     top:50pt;
     
-    max-width: 30%;
+    max-width:40%;
     display:block;
     margin: auto;
     
     text-align: center;
 }
+@media screen and (max-width:500px){
+    #greettext{
+        font-size: 7vw;
+    }
+}
 #pageicon{
     position:relative;
     top:20pt; 
-    height:30vh;
+    height:35vh;
     display: block;
     margin: auto;
    
@@ -190,7 +203,7 @@ body{margin:0;
     background: black;
     position: fixed;
     display: block;
-    height: 100%;
+    height: 100% !important;
     width: 100%;
     z-index:9999;
     
@@ -235,7 +248,7 @@ body{margin:0;
 #pen{ background-image: url(../images/pencil.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size:80px;
+    background-size:cover;
     position:fixed;
     bottom:20;
     right:20;
@@ -246,13 +259,23 @@ body{margin:0;
     border-radius:50px;
     background-color:whitesmoke; 
     transform: scale(1,1);
-    transition:0.5s; 
+    transition:0.2s; 
+    z-index: 10;
+    padding: 5 5;
+}
+@media screen and (max-width:500px){
+    #pen{
+        background-size: contain;
+        padding: 5 5;
+        height:50;
+        width:50;
+    }
 }
 #pen:hover{
     cursor:pointer;
-    background-size:70px; 
-    background-color: aquamarine;
-    transition:0.5s;
+    background-size:contain; 
+    background-color:#3bcc72 ;
+    transition:0.2s;
     transform: scale(0.9,0.9);
 }
 .profilepic{
@@ -268,14 +291,18 @@ background-color: aliceblue;
 }
 #signupbox{
     font-family:nunito;
-    position: absolute;
+    position: relative;
     border-radius:20px;
     background-color: #2f3030;
-    left:450;
-    top:130;
-    height:80%;
-    width:40%;
+    margin:auto;
+    top: 45%;
+  transform: translateY(-50%);
+    height:600px;
+    width:700px;
     box-shadow:0px 0px 30px #3bcc72;
+}
+@media screen and (){
+    
 }
 #input-wrapper{position: absolute;
     top:30px;
@@ -303,9 +330,9 @@ height:80%;
     background-color:#3bcc72; 
     color: aliceblue;
     font-size:20px;
-    position: absolute;
-    bottom:80px;
-    left:230;
+    position: relative;
+    margin: auto;
+    top:150px;
     font-family:nunito;
     border:none;
     border-radius:20px;
@@ -316,8 +343,23 @@ height:80%;
     cursor: pointer;
     background-color:#28a658;
 }
+#delete{
+    background-color:#c01919; 
+    color: aliceblue;
+    font-size:20px;
+    position: relative;
+    margin: auto;
+    
+    font-family:nunito;
+    border:none;
+    
+    border-radius:20px;
+    padding:10px 40px;
+    outline: none;
+}
 
-.userdetails {text-align: center;
+.userdetails {
+    text-align: center;
     position: relative;
     top:125px;
     width: 100%;
@@ -345,20 +387,34 @@ height:80%;
     
 }
 
-#editor {position: absolute;
-    top:20;
-    left:230;
-    height:80%;
-    width: 70%;
+#textbox{
+    padding:8 8;
+    position:relative;
+    top:30pt;
+    border-radius:10px; 
+    background-color: aliceblue;
+    display: block table;
+    margin: auto;
+    width:50%;
+}
+@media screen and (max-width:500px){
+    #textbox{
+        top:10;
+        width:90%;
+        height:auto ;
+        margin-left: 5%;
+        margin-right: 5%;
+        
+    }
 }
 
 
 
-#textbox {position:fixed;
+#editorback{position: fixed;
     height: 100%;
     width: 100%;
     background: rgba(0, 0, 0, 0.8);
-    z-index: 3;
+    z-index: 1031;
 }
 
 #text {
@@ -391,30 +447,8 @@ height:80%;
     transform: scale(0.9,0.9);
 }
 
-#cancel {
-    position: absolute;
-    background-color:#ff6666 ;
-    outline: none;
-    border: none;
-    bottom:-122;
-    left:235;
-    border-radius:100px;
-    font-size: 20;
-    height:80;
-    width:80;
-    background-size: cover;
-    background-image: url("../images/cancel.png");
-    transition:1s;
-    transform: scale(1,1);
-}
-#cancel:hover{ border: solid;
-    border-width:10px; 
-    border-color:#ff6666  ;
-    cursor: pointer;
-    transition:1s;
-    transform: scale(0.9,0.9);
-    
-}
+
+
 
 #logout {height:60%;
     width:4%;
@@ -454,37 +488,50 @@ height:80%;
     cursor: pointer;
 }
 
-#title {
+.title {
     width: 100%;
     margin-bottom:20px;
     height:30px;
     padding: 5px;
     font-size: 15px;
+    border:solid;
+    border-color: cornflowerblue ;
     text-transform: capitalize;
     
 }
 
 #pagetag {font-size:44;
     font-weight:400;
-    margin-top:130;
+    margin-top:30;
     color: white;
-    text-shadow: 2px 2px 2px black;
-    font-family: nunito;
+    transform: skew(-10deg);
+    background-color:black;
+    font-family: inherit;
     text-align: center;
+    width: 250px;
+    padding: 5px 5px 5px 5px;
 }
 
 .feedcontainer {
-    overflow: hidden;
-display: inline-block;
-    height:auto;
     background:transparent;
-    position: absolute;
-top:255;
-    left:120;
+    overflow: hidden;
+    display: inline-block block;
+    height:auto;
     
-    width: 55%;
+    position:relative;
+    margin-top: 55pt;
+    margin-left:auto;
+    margin-right: auto;
+    width:60%;
     
     
+}
+@media screen and (max-width:1200px){
+    .feedcontainer{
+        width: 100%;
+        
+        
+    }
 }
 
 .pagetag1 {
@@ -506,17 +553,58 @@ top:255;
 .blog{
     overflow: hidden;
     word-break:keep-all;
-    margin:20 20;
-    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:70;
+    margin-bottom:70; 
     background:white;
-    box-shadow: 2px 2px 10px  black;
     font-family: nunito;
     width:90%;
-    font-size:28; 
-    display: inline-block;
+    width:90%;
+    font-size:18px; 
+    display: inline-block block;
+    border-radius:5px;
     border:solid;
     border-width:1;
-    border-color:#2f3030;;
+    border-color:#bcbcbc;
+    padding:20 20; 
+}
+.blog_title{
+font-weight: bold;
+font-size: 35px;
+font-family: monospace;
+
+}
+.blog_details{
+    font-family: monospace;
+    color:#28a658;
+    font-size:15px;
+}
+.content{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.likes_image{
+
+    height:20px;
+    transition-duration: 0.25s;
+}
+.likes_image:hover{
+    cursor: pointer;
+    transform: scale(1.25,1.25);
+    transition-duration: 0.25;;
+}
+.likes{
+    font-size: 12.5px ;
+    
+}
+.category{
+    
+    font-style: italic;
+    padding: 2.5px;
+    background-color: #28a658;
+    color:white;
+    
 }
 #myblogs {
     height:60%;
@@ -557,5 +645,32 @@ top:255;
 .homeContainer {
     height: 100%;
     width: 100%;
-    position: 
+}
+
+.custom-link {
+    color: white;
+}
+.custom-link:hover{
+    color: #3bcc72 !important;
+}
+
+
+
+.toggler-icon {
+    background-image: url(../images/menu.png) !important;
+    height: 10pt;
+}
+
+#options-position {
+    margin-top:5px ;
+}
+@media screen and (max-width:1140px){
+    #options-position{
+        position:relative;
+        left:50pt;
+    }
+}
+
+#cancel {
+   
 }
