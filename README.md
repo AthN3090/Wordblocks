@@ -15,6 +15,7 @@ yup! that's all you need.
 * XAMPP
 * MySQL
 * JS
+* CKEditor API
 
 ## Live site
 
