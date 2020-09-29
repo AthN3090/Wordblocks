@@ -1,5 +1,5 @@
 # WordBlocks
-Wordblocks is a very basic blogging platform. 
+This is a basic blogging website with a beautiful frontend targeted for beginner bloggers. The backend for the site is built on PHP and the frontend is built on JavaScript with the heavy implementation of AJAX for asynchronous client-server communication and dynamic delivery of content. 
 
 ## Getting Started
 
