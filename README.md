@@ -25,7 +25,10 @@ yup! that's all you need.
 
 ## Live site
 
-* [https://wordblocks.000webhostapp.com/](https://wordblocks.000webhostapp.com/)
+* [https://wordblocks.000webhostapp.com/](https://wordblocks2.000webhostapp.com/)
+* For testing:
+* *username : athn
+* *password : aman
 
 ## Authors
 
